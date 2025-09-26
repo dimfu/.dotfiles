@@ -880,14 +880,6 @@ require('lazy').setup({
   --   end,
   -- },
 
-  -- {
-  --   'monotone',
-  --   dir = '~/.config/nvim',
-  --   config = function()
-  --     vim.cmd.colorscheme 'monotone'
-  --   end,
-  -- },
-
   {
     'zenbones-theme/zenbones.nvim',
     -- Optionally install Lush. Allows for more configuration or extending the colorscheme
@@ -903,6 +895,16 @@ require('lazy').setup({
       vim.cmd.colorscheme 'zenwritten'
     end,
   },
+
+  -- {
+  --   'oncomouse/lushwal.nvim',
+  --   cmd = { 'LushwalCompile' },
+  --   dependencies = {
+  --     { 'rktjmp/lush.nvim' },
+  --     { 'rktjmp/shipwright.nvim' },
+  --   },
+  --   lazy = false,
+  -- },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
