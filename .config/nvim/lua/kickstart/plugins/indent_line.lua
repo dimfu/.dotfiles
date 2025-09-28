@@ -11,8 +11,8 @@ return { -- Add indentation guides even on blank lines
     --   tab_char = { '', '', '', '' },
     -- },
     indent = {
-      char = { '│' },
-      tab_char = { '│' },
+      char = { '' },
+      tab_char = { '' },
     },
     exclude = {
       filetypes = {

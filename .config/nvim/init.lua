@@ -868,43 +868,31 @@ require('lazy').setup({
   -- },
 
   -- {
-  --   'metalelf0/black-metal-theme-neovim',
+  --   'zenbones-theme/zenbones.nvim',
+  --   -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+  --   -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+  --   -- In Vim, compat mode is turned on as Lush only works in Neovim.
+  --   dependencies = 'rktjmp/lush.nvim',
   --   lazy = false,
   --   priority = 1000,
+  --   -- you can set set configuration options here
   --   config = function()
-  --     require('black-metal').setup {
-  --       theme = 'thyrfing',
-  --       variant = 'dark',
-  --     }
-  --     require('black-metal').load()
+  --     vim.g.zenbones_darken_comments = 100
+  --     vim.g.zenwritten = { transparent_background = true }
+  --     vim.cmd.colorscheme 'zenwritten'
   --   end,
   -- },
 
   {
-    'zenbones-theme/zenbones.nvim',
-    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-    -- In Vim, compat mode is turned on as Lush only works in Neovim.
-    dependencies = 'rktjmp/lush.nvim',
+    'RedsXDD/neopywal.nvim',
+    name = 'neopywal',
     lazy = false,
     priority = 1000,
-    -- you can set set configuration options here
+    opts = {},
     config = function()
-      vim.g.zenbones_darken_comments = 100
-      vim.g.zenwritten = { transparent_background = true }
-      vim.cmd.colorscheme 'zenwritten'
+      vim.cmd.colorscheme 'neopywal'
     end,
   },
-
-  -- {
-  --   'oncomouse/lushwal.nvim',
-  --   cmd = { 'LushwalCompile' },
-  --   dependencies = {
-  --     { 'rktjmp/lush.nvim' },
-  --     { 'rktjmp/shipwright.nvim' },
-  --   },
-  --   lazy = false,
-  -- },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
