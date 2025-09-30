@@ -13,9 +13,7 @@ DURATION=3
 
 # wofi window config (in %)
 WIDTH=20
-HEIGHT=30
-
-CURSOR=$(hyprctl cursorpos | tr -d ' ')  
+HEIGHT=30 CURSOR=$(hyprctl cursorpos | tr -d ' ')  
 
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-pos $CURSOR"
 HYPRLOCK_CONF="$HOME/.config/hypr/hyprlock.conf"
