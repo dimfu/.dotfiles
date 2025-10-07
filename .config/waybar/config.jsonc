@@ -61,9 +61,9 @@
         "exec": "python ~/.config/waybar/mediaplayer.py --player spotify",
         "format": "[ {}   ]",
         "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
+        "on-click": "playerctl --player=spotify play-pause",
+        "on-scroll-up": "playerctl --player=spotify next",
+        "on-scroll-down": "playerctl --player=spotify previous"
     },
     "custom/power": {
         "exec": "echo '[LOCK]'", // Just to display the power icon
